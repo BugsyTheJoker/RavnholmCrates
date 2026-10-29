@@ -1,0 +1,28 @@
+# Build outputs and Gradle caches
+.gradle/
+.kotlin/
+build/
+out/
+*.class
+
+# IDE and OS files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local third-party dependencies (not redistributed)
+/libs/*.jar
+
+# Local secrets and server runtime data
+.env
+.env.*
+!.env.example
+*.log
+
+# Keep the Gradle wrapper JAR (part of the Gradle wrapper)
+!gradle/wrapper/gradle-wrapper.jar
