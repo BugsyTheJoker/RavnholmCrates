@@ -1,0 +1,638 @@
+
+# ============================================================
+# RAVNHOLM SMP - CRATE SYSTEM
+# ============================================================
+#
+# Oprindelige CrazyCrates-præmier:
+# Vote Crate:      13 præmier
+# Ravnholm Crate:  15 præmier
+# Royal Crate:     15 præmier
+#
+# Crate-ID'er:
+# vote      = Vote Crate
+# epic      = Ravnholm Crate
+# legendary = Royal Crate
+#
+# Vægte er bevaret fra de gamle konfigurationer.
+# En vægt er relativ til summen af vægtene i samme crate.
+#
+# ============================================================
+
+crates:
+
+  # ==========================================================
+  # VOTE CRATE
+  # ==========================================================
+
+  vote:
+    name: "&b&lVote Crate"
+
+    hologram:
+      enabled: true
+      height: 1.5
+      lines:
+        - "<bold><#32CD32>VOTE CRATE</#32CD32></bold>"
+        - "<gray>Brug en <gold>Vote Key</gold></gray>"
+        - "<yellow>Højreklik for at se præmier</yellow>"
+
+    key:
+      material: TRIPWIRE_HOOK
+      name: "&b&lVote Nøgle"
+      lore:
+        - "&8&m------------------------"
+        - "&7En nøgle skabt af Ravnholms runer."
+        - ""
+        - "&7Åbner: &b{crate}"
+        - ""
+        - "&7Brug nøglen ved den"
+        - "&7tilhørende crate på spawn."
+        - ""
+        - "&b✦ &fRunernes Dom &b✦"
+        - "&8&m------------------------"
+
+    rewards:
+
+      # 1 - $25
+      money_25:
+        type: MONEY
+        name: "&a$25"
+        material: SUNFLOWER
+        amount: 25
+        weight: 25.0
+        lore:
+          - "&7Modtag &a$25&7."
+          - ""
+          - "&8Almindelig præmie"
+
+      # 2 - $50
+      money_50:
+        type: MONEY
+        name: "&a$50"
+        material: SUNFLOWER
+        amount: 50
+        weight: 18.0
+        lore:
+          - "&7Modtag &a$50&7."
+
+      # 3 - $100
+      money_100:
+        type: MONEY
+        name: "&6$100"
+        material: SUNFLOWER
+        amount: 100
+        weight: 8.0
+        lore:
+          - "&7Modtag &6$100&7."
+          - ""
+          - "&eEn god gevinst!"
+
+      # 4 - 8 Iron Ingots
+      iron:
+        type: ITEM
+        name: "&f8x Iron Ingots"
+        material: IRON_INGOT
+        amount: 8
+        weight: 15.0
+
+      # 5 - 4 Gold Ingots
+      gold:
+        type: ITEM
+        name: "&64x Gold Ingots"
+        material: GOLD_INGOT
+        amount: 4
+        weight: 12.0
+
+      # 6 - 2 Diamonds
+      diamonds:
+        type: ITEM
+        name: "&b2x Diamonds"
+        material: DIAMOND
+        amount: 2
+        weight: 6.0
+        lore:
+          - "&7Modtag &b2 Diamonds&7."
+
+      # 7 - 4 Emeralds
+      emeralds:
+        type: ITEM
+        name: "&a4x Emeralds"
+        material: EMERALD
+        amount: 4
+        weight: 8.0
+
+      # 8 - 16 XP Bottles
+      xp_bottles:
+        type: ITEM
+        name: "&e16x XP Bottles"
+        material: EXPERIENCE_BOTTLE
+        amount: 16
+        weight: 12.0
+
+      # 9 - 8 Golden Carrots
+      golden_carrots:
+        type: ITEM
+        name: "&68x Golden Carrots"
+        material: GOLDEN_CARROT
+        amount: 8
+        weight: 12.0
+
+      # 10 - Name Tag
+      name_tag:
+        type: ITEM
+        name: "&eName Tag"
+        material: NAME_TAG
+        amount: 1
+        weight: 8.0
+
+      # 11 - Ender Chest
+      ender_chest:
+        type: ITEM
+        name: "&5Ender Chest"
+        material: ENDER_CHEST
+        amount: 1
+        weight: 5.0
+        lore:
+          - "&7Modtag en &5Ender Chest&7."
+
+      # 12 - Ekstra Vote Key
+      extra_vote_key:
+        type: KEY
+        name: "&a&lEKSTRA VOTE KEY!"
+        material: TRIPWIRE_HOOK
+        crate: vote
+        amount: 1
+        weight: 3.0
+        lore:
+          - "&7Du får endnu en chance!"
+          - ""
+          - "&a+1 Vote Key"
+
+      # 13 - Ravnholm Key
+      # Oprindelig vægt: 0.132132
+      ravnholm_key:
+        type: KEY
+        name: "&6&lRAVNHOLM KEY"
+        material: NETHER_STAR
+        crate: epic
+        amount: 1
+        weight: 0.132132
+        lore:
+          - "&7En ekstremt sjælden nøgle til"
+          - "&6&lRavnholm Crate&7."
+          - ""
+          - "&8Chance: &cCa. 0,1%"
+
+
+  # ==========================================================
+  # RAVNHOLM CRATE
+  # Eksisterende ID: epic
+  # ==========================================================
+
+  epic:
+    name: "&d&lEpic Crate"
+
+    hologram:
+      enabled: true
+      height: 1.5
+      lines:
+        - "<bold><gradient:#FFD700:#A855F7>RAVNHOLM CRATE</gradient></bold>"
+        - "<gray>Brug en <gold>Ravnholm Key</gold></gray>"
+        - "<yellow>Venstreklik for at se præmier</yellow>"
+
+    key:
+      material: AMETHYST_SHARD
+      name: "&d&lEpic Nøgle"
+      lore:
+        - "&8&m------------------------"
+        - "&7En sjælden nøgle fyldt med"
+        - "&7gammel runemagi."
+        - ""
+        - "&7Åbner: &d{crate}"
+        - ""
+        - "&7Kun de udvalgte kan vække"
+        - "&7de mægtige runer til live."
+        - ""
+        - "&d✦ &fRunernes Dom &d✦"
+        - "&8&m------------------------"
+
+    rewards:
+
+      # 1 - $500
+      money_500:
+        type: MONEY
+        name: "&a$500"
+        material: SUNFLOWER
+        amount: 500
+        weight: 20.0
+        lore:
+          - "&7Modtag &a$500&7."
+
+      # 2 - $1.000
+      money_1000:
+        type: MONEY
+        name: "&6$1.000"
+        material: SUNFLOWER
+        amount: 1000
+        weight: 10.0
+        lore:
+          - "&7Modtag &6$1.000&7."
+
+      # 3 - 16 Diamonds
+      diamonds:
+        type: ITEM
+        name: "&b16x Diamonds"
+        material: DIAMOND
+        amount: 16
+        weight: 18.0
+
+      # 4 - 16 Ancient Debris
+      ancient_debris:
+        type: ITEM
+        name: "&616x Ancient Debris"
+        material: ANCIENT_DEBRIS
+        amount: 16
+        weight: 8.0
+        lore:
+          - "&716 Ancient Debris."
+          - "&7En værdifuld Ravnholm-præmie."
+
+      # 5 - Mending Book
+      mending_book:
+        type: ITEM
+        name: "&dMending Book"
+        material: ENCHANTED_BOOK
+        amount: 1
+        weight: 12.0
+        enchantments:
+          mending: 1
+
+      # 6 - 64 XP Bottles
+      xp_bottles:
+        type: ITEM
+        name: "&e64x XP Bottles"
+        material: EXPERIENCE_BOTTLE
+        amount: 64
+        weight: 15.0
+
+      # 7 - Elytra
+      elytra:
+        type: ITEM
+        name: "&d&lElytra"
+        material: ELYTRA
+        amount: 1
+        weight: 5.0
+        lore:
+          - "&7Et par Elytra."
+          - ""
+          - "&dSjælden præmie"
+
+      # 8 - Ravnholms Skovøkse
+      ravnholm_axe:
+        type: ITEM
+        name: "&a&lRavnholms Skovøkse"
+        material: DIAMOND_AXE
+        amount: 1
+        weight: 6.0
+        enchantments:
+          efficiency: 7
+          unbreaking: 4
+        lore:
+          - "&7Efficiency VII"
+          - "&7Unbreaking IV"
+          - ""
+          - "&2Et værktøj fra Ravnholms skove."
+          - ""
+          - "&a★ RAVNHOLM ITEM ★"
+
+      # 9 - Ravnholms Minehakke
+      ravnholm_pickaxe:
+        type: ITEM
+        name: "&b&lRavnholms Minehakke"
+        material: DIAMOND_PICKAXE
+        amount: 1
+        weight: 5.0
+        enchantments:
+          efficiency: 7
+          fortune: 4
+          unbreaking: 4
+        lore:
+          - "&7Efficiency VII"
+          - "&7Fortune IV"
+          - "&7Unbreaking IV"
+          - ""
+          - "&b★ RAVNHOLM ITEM ★"
+
+      # 10 - Ridder Ravnholms Klinge
+      ravnholm_sword:
+        type: ITEM
+        name: "&c&lRidder Ravnholms Klinge"
+        material: DIAMOND_SWORD
+        amount: 1
+        weight: 3.0
+        enchantments:
+          sharpness: 7
+          looting: 4
+          unbreaking: 5
+          fire_aspect: 2
+        lore:
+          - "&7Sharpness VII"
+          - "&7Looting IV"
+          - "&7Unbreaking V"
+          - "&7Fire Aspect II"
+          - ""
+          - "&4En klinge båret af Ravnholms"
+          - "&4legendariske ridder."
+          - ""
+          - "&c★ RAVNHOLM ITEM ★"
+
+      # 11 - Ravnholms Bjergbryder
+      ravnholm_bjergbryder:
+        type: ITEM
+        name: "&b&lRavnholms Bjergbryder"
+        material: DIAMOND_PICKAXE
+        amount: 1
+        weight: 1.5
+        enchantments:
+          efficiency: 10
+          fortune: 5
+          unbreaking: 5
+        lore:
+          - "&bEfficiency X"
+          - "&bFortune V"
+          - "&bUnbreaking V"
+          - ""
+          - "&7En hakke smedet til dem,"
+          - "&7der graver dybere end andre."
+          - ""
+          - "&6★ LEGENDARISK RAVNHOLM ITEM ★"
+
+      # 12 - Ravnholms Brystplade
+      ravnholm_chestplate:
+        type: ITEM
+        name: "&d&lRavnholms Brystplade"
+        material: NETHERITE_CHESTPLATE
+        amount: 1
+        weight: 1.5
+        enchantments:
+          protection: 5
+          unbreaking: 5
+        lore:
+          - "&dProtection V"
+          - "&dUnbreaking V"
+          - ""
+          - "&7En brystplade værdig til"
+          - "&7Ravnholms stærkeste krigere."
+          - ""
+          - "&6★ LEGENDARISK RAVNHOLM ITEM ★"
+
+      # 13 - 2 Ravnholm Keys
+      double_ravnholm_key:
+        type: KEY
+        name: "&6&l2x RAVNHOLM KEY"
+        material: AMETHYST_SHARD
+        crate: epic
+        amount: 2
+        weight: 1.0
+        lore:
+          - "&7Du får &62 nye Ravnholm Keys&7!"
+          - ""
+          - "&eTo nye chancer på luksuspræmier."
+
+      # 14 - 4 Netherite Ingots
+      netherite_ingots:
+        type: ITEM
+        name: "&8&l4x Netherite Ingots"
+        material: NETHERITE_INGOT
+        amount: 4
+        weight: 4.0
+        lore:
+          - "&7Modtag &f4 Netherite Ingots&7."
+
+      # 15 - Totem of Undying
+      totem:
+        type: ITEM
+        name: "&6Totem of Undying"
+        material: TOTEM_OF_UNDYING
+        amount: 1
+        weight: 5.0
+        lore:
+          - "&7Et &6Totem of Undying&7."
+          - ""
+          - "&eSjælden præmie"
+
+
+  # ==========================================================
+  # ROYAL CRATE
+  # Eksisterende ID: legendary
+  # ==========================================================
+
+  legendary:
+    name: "&6&lLegendary Crate"
+
+    hologram:
+      enabled: true
+      height: 1.5
+      lines:
+        - "<bold><gradient:#FFD700:#CC2222>ROYAL CRATE</gradient></bold>"
+        - "<gray>Eksklusiv <gold>Event Crate</gold></gray>"
+        - "<yellow>Venstreklik for at se præmier</yellow>"
+
+    key:
+      material: BLAZE_ROD
+      name: "&6&lLegendary Nøgle"
+      lore:
+        - "&8&m------------------------"
+        - "&7En legendarisk nøgle smedet"
+        - "&7af Ravnholms ældste runer."
+        - ""
+        - "&7Åbner: &6{crate}"
+        - ""
+        - "&eDe største skatte venter"
+        - "&epå den værdige kriger."
+        - ""
+        - "&6✦ &eRUNERNES DOM &6✦"
+        - "&8&m------------------------"
+
+    rewards:
+
+      # 1 - $250
+      money_250:
+        type: MONEY
+        name: "&a$250"
+        material: SUNFLOWER
+        amount: 250
+        weight: 18.0
+        lore:
+          - "&7Modtag &a$250&7."
+
+      # 2 - $500
+      money_500:
+        type: MONEY
+        name: "&a$500"
+        material: SUNFLOWER
+        amount: 500
+        weight: 12.0
+        lore:
+          - "&7Modtag &a$500&7."
+
+      # 3 - 16 Diamonds
+      diamonds:
+        type: ITEM
+        name: "&b16x Diamonds"
+        material: DIAMOND
+        amount: 16
+        weight: 16.0
+        lore:
+          - "&7Modtag &b16 Diamonds&7."
+
+      # 4 - 8 Ancient Debris
+      ancient_debris:
+        type: ITEM
+        name: "&68x Ancient Debris"
+        material: ANCIENT_DEBRIS
+        amount: 8
+        weight: 10.0
+        lore:
+          - "&7Modtag &68 Ancient Debris&7."
+
+      # 5 - 2 Netherite Ingots
+      netherite_ingots:
+        type: ITEM
+        name: "&8&l2x Netherite Ingots"
+        material: NETHERITE_INGOT
+        amount: 2
+        weight: 7.0
+        lore:
+          - "&7Modtag &f2 Netherite Ingots&7."
+
+      # 6 - 64 XP Bottles
+      xp_bottles:
+        type: ITEM
+        name: "&e64x XP Bottles"
+        material: EXPERIENCE_BOTTLE
+        amount: 64
+        weight: 14.0
+
+      # 7 - 16 Golden Apples
+      golden_apples:
+        type: ITEM
+        name: "&616x Golden Apples"
+        material: GOLDEN_APPLE
+        amount: 16
+        weight: 10.0
+        lore:
+          - "&7Modtag &616 Golden Apples&7."
+
+      # 8 - Mending Book
+      mending_book:
+        type: ITEM
+        name: "&dMending Book"
+        material: ENCHANTED_BOOK
+        amount: 1
+        weight: 10.0
+        enchantments:
+          mending: 1
+        lore:
+          - "&7En bog med &dMending&7."
+
+      # 9 - Royal Minehakke
+      royal_pickaxe:
+        type: ITEM
+        name: "&6&lRoyal Minehakke"
+        material: DIAMOND_PICKAXE
+        amount: 1
+        weight: 8.0
+        enchantments:
+          efficiency: 5
+          fortune: 3
+          unbreaking: 3
+        lore:
+          - "&7Efficiency V"
+          - "&7Fortune III"
+          - "&7Unbreaking III"
+          - ""
+          - "&6★ ROYAL ITEM ★"
+
+      # 10 - Royal Klinge
+      royal_sword:
+        type: ITEM
+        name: "&c&lRoyal Klinge"
+        material: DIAMOND_SWORD
+        amount: 1
+        weight: 8.0
+        enchantments:
+          sharpness: 5
+          looting: 3
+          unbreaking: 3
+        lore:
+          - "&7Sharpness V"
+          - "&7Looting III"
+          - "&7Unbreaking III"
+          - ""
+          - "&6★ ROYAL ITEM ★"
+
+      # 11 - Royal Brystplade
+      royal_chestplate:
+        type: ITEM
+        name: "&6&lRoyal Brystplade"
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+        weight: 8.0
+        enchantments:
+          protection: 4
+          unbreaking: 3
+        lore:
+          - "&7Protection IV"
+          - "&7Unbreaking III"
+          - ""
+          - "&6★ ROYAL ITEM ★"
+
+      # 12 - Elytra
+      elytra:
+        type: ITEM
+        name: "&d&lElytra"
+        material: ELYTRA
+        amount: 1
+        weight: 5.0
+        lore:
+          - "&7Et par &dElytra&7."
+          - ""
+          - "&6★ Sjælden præmie ★"
+
+      # 13 - Totem of Undying
+      totem:
+        type: ITEM
+        name: "&6Totem of Undying"
+        material: TOTEM_OF_UNDYING
+        amount: 1
+        weight: 6.0
+        lore:
+          - "&7Et &6Totem of Undying&7."
+
+      # 14 - 2 Royal Keys
+      double_royal_key:
+        type: KEY
+        name: "&6&l2x ROYAL KEY"
+        material: GOLD_NUGGET
+        crate: legendary
+        amount: 2
+        weight: 2.0
+        lore:
+          - "&7Du får &62 nye Royal Keys&7!"
+          - ""
+          - "&eTo nye chancer på Royal Crate."
+
+      # 15 - Ravnholm Key
+      ravnholm_key:
+        type: KEY
+        name: "&6&lRAVNHOLM KEY"
+        material: AMETHYST_SHARD
+        crate: epic
+        amount: 1
+        weight: 0.724
+        lore:
+          - "&7Den ultimative Royal-præmie."
+          - ""
+          - "&7Åbner en &d&lRavnholm Crate&7."
+          - ""
+          - "&8Chance: ca. &c0,5%"

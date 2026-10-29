@@ -1,0 +1,9 @@
+# =====================================
+# RavnholmCrates - Configuration
+# =====================================
+
+settings:
+  debug: false
+
+messages:
+  prefix: "&8[&6Ravnholm&8] &7"

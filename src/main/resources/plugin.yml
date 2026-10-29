@@ -1,0 +1,39 @@
+
+name: RavnholmCrates
+version: 1.0.0
+main: dk.ravnholm.crates.RavnholmCrates
+api-version: '26.2'
+author: BugsyTheJoker
+description: Ravnholm SMP's eget crate-system.
+
+# ============================================================
+# PLUGIN AFHÆNGIGHEDER
+# ============================================================
+
+# FancyHolograms indlæses før RavnholmCrates,
+# hvis det er installeret på serveren.
+#
+# Hvis FancyHolograms mangler, kan vores
+# crate-system stadig starte uden hologrammer.
+
+softdepend:
+  - FancyHolograms
+
+# ============================================================
+# KOMMANDOER
+# ============================================================
+
+commands:
+  ravnholmcrates:
+    description: Administrer RavnholmCrates.
+    usage: /ravnholmcrates
+    permission: ravnholmcrates.admin
+
+# ============================================================
+# PERMISSIONS
+# ============================================================
+
+permissions:
+  ravnholmcrates.admin:
+    description: Giver adgang til administration af crates.
+    default: op
